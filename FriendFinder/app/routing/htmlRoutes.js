@@ -1,12 +1,13 @@
 var path = require("path");
 
-module.exports = function(friendFinder) {
+module.exports = function(app) {
     // A GET Route to /survey which should display the survey page.
-    friendFinder.get("/survey", function(req, res) {
+    app.get("/survey", function(req, res) {
         res.sendFile(path.join(__dirname + "/../public/survery.html"));
+        console.log(path.join(__dirname, "view.html"));
     });
     // A default, catch-all route that leads to home.html which displays the home page.
-    friendFinder.user(function(req, res) {
-        res.sendFile(path.join(__dirname + "/public/home.html"));
+    app.user(function(req, res) {
+        res.sendFile(path.join(__dirname + "/../public/home.html"));
     })
 }
