@@ -7,10 +7,12 @@ module.exports = function(app) {
         console.log(path.join(__dirname, "view.html"));
     });
 
+    // A GET Route to / which should display the home page.
     app.get("/", function(req, res) {
         res.sendFile(path.join(__dirname + "/../public/home.html"));
         console.log(path.join(__dirname, "view.html"));
     });
+
     // A default, catch-all route that leads to home.html which displays the home page.
     app.get("*", function(req, res) {
         res.sendFile(path.join(__dirname + "/../public/home.html"));

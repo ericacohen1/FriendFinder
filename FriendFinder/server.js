@@ -8,7 +8,7 @@ var PORT = process.env.PORT || 3000;
 
 // Sets up the Express app to handle data parsing
 // tells the system whether you want to use a simple algorithm for shallow parsing (i.e. false) or complex algorithm for deep parsing that can deal with nested objects (i.e. true).
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 // tells the system I want to user json
 app.use(bodyParser.json());
 

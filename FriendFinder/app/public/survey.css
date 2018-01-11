@@ -1,0 +1,12 @@
+.modal-content {
+    text-align: center;
+    overflow-y: auto;    
+    overflow-x: auto;
+    width: 100%;
+}
+
+@media screen and (max-width: 460px) {
+    #match-img {
+        width: 100%;
+    }
+}

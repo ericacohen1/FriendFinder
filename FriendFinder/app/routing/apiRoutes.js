@@ -23,7 +23,8 @@ module.exports = function(app) {
         console.log(usersInfo);
         var usersName = usersInfo.name;
         var usersPhoto = usersInfo.photo;
-        var usersScores = usersInfo['scores[]'];
+        // var usersScores = usersInfo['scores[]'];
+        var usersScores = usersInfo.scores;
         console.log(usersScores);
         var diffTotal = 0;
         // console.log(userInfo);
@@ -47,8 +48,7 @@ module.exports = function(app) {
     
         }
         // adding new user to database
-        // if I want to do this I need to remove the square brackets from other arrays
-        // friends.push(usersInfo);
+        friends.push(usersInfo);
 
         res.json({newFriend});
     });
