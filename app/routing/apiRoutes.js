@@ -48,7 +48,7 @@ module.exports = function(app) {
     
         }
         // adding new user to database
-        friends.push(usersInfo);
+        friends.push(req.body);
 
         res.json({newFriend});
     });
